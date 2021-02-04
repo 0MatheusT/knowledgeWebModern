@@ -1,4 +1,10 @@
 module.exports = app =>{
-  app.post('/users')
+  app.route('/users')
+    .post(app.api.user.save)
+    .get(app.api.user.get)
+
+  
+  app.route('/users/:id')
     .get(app.api.user.save)
+
 }
